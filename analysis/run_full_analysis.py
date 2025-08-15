@@ -48,24 +48,24 @@ def main():
     print(f"Working directory: {os.getcwd()}")
     
     # Check if we're in the analysis directory
-    if not os.path.exists("01_run_mofa.py"):
+    if not os.path.exists("analysis/01_run_mofa.py"):
         print("❌ ERROR: Please run this script from the 'analysis' directory")
         print("   cd analysis")
         print("   python run_full_analysis.py")
         return
     
     # Step 1: Run MOFA+ analysis
-    if not run_script("01_run_mofa.py", "Run MOFA+ analysis on multi-omics data"):
+    if not run_script("analysis/01_run_mofa.py", "Run MOFA+ analysis on multi-omics data"):
         print("❌ Step 1 failed. Stopping analysis.")
         return
     
     # Step 2: Generate plots
-    if not run_script("02_plot_results.py", "Generate MOFA+ result plots"):
+    if not run_script("analysis/02_plot_results.py", "Generate MOFA+ result plots"):
         print("❌ Step 2 failed. Stopping analysis.")
         return
     
     # Step 3: Clustering analysis
-    if not run_script("03_clustering_analysis.py", "Perform clustering analysis"):
+    if not run_script("analysis/03_clustering_analysis.py", "Perform clustering analysis"):
         print("❌ Step 3 failed. Stopping analysis.")
         return
     

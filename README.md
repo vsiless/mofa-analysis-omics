@@ -19,28 +19,29 @@ mofa/
 │   └── README.md            # This file
 ├── figs/                     # Output figures (created automatically)
 └── mofa_model.hdf5          # MOFA+ model (created by Step 1)
+└── mofa_clustering_results.csv
 ```
 
 ## 🚀 Quick Start
 
 ### Option 1: Run Complete Pipeline
 ```bash
-cd analysis
-python run_full_analysis.py
+cd mofa
+python analysis/run_full_analysis.py
 ```
 
 ### Option 2: Run Steps Individually
 ```bash
-cd analysis
+cd mofa
 
 # Step 1: Run MOFA+ analysis
-python 01_run_mofa.py
+python analysis/01_run_mofa.py
 
 # Step 2: Generate plots
-python 02_plot_results.py
+python analysis/02_plot_results.py
 
 # Step 3: Perform clustering
-python 03_clustering_analysis.py
+python analysis/03_clustering_analysis.py
 ```
 
 ## 📊 Analysis Steps
